@@ -15,3 +15,10 @@ The COUNTRYCODE for Japan is JPN
 */
 --                   solution 
 select sum(population) from city where countrycode in 'JPN';
+
+/* 
+                            question-03
+Query the difference between the maximum and minimum populations in CITY.
+*/
+--                   solution 
+select (max(population) - min(population)) from city;
