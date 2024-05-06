@@ -85,3 +85,20 @@ Return the result table sorted by id in ascending order
 select distinct author_id as id from views 
 where author_id = viewer_id
 order by id asc;
+
+
+/* 
+                            question-05
++----------------+---------+
+| Column Name    | Type    |
++----------------+---------+
+| tweet_id       | int     |
+| content        | varchar |
++----------------+---------+
+Write a solution to find the IDs of the invalid tweets.
+The tweet is invalid if the number of characters used in 
+the content of the tweet is strictly greater than 15
+*/
+--                    solution 
+select tweet_id from Tweets where
+length(content) > 15;
